@@ -1,13 +1,11 @@
 import requests, json
 
 class PersonInfo:
-    def __init__(self, taskDataId: str, business_id: str) -> None:
-        self.__taskDataId = taskDataId
-        self.__business_id = business_id
+    def __init__(self, task_data_id: str, business_type: str) -> None:
         self.__url = 'https://www.xfyeta.com/taichi-data-api/api/v2/outbound/11075/queryTaskDataReport?token='
         self.__data = {
-            "taskDataId": taskDataId,
-            "business_id": business_id,
+            "taskDataId": task_data_id,
+            "business_id": business_type,
             "channelCode": 2,
             "pageIndex": 1,
             "pageSize": 1,
