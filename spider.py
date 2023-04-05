@@ -26,4 +26,5 @@ class PersonInfo:
         self.__tel_number = response[response.find('tel_number') ::].split(':"')[1].split('"')[0]
 
     def getInfo(self) -> tuple:
+        self.setInfo()
         return self.__business_type, self.__tel_number

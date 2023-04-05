@@ -11,5 +11,6 @@ class UrlInfo:
         self.__business_type = strArray[len(strArray) - 2]
 
     def getInfo(self) -> tuple:
+        self.setInfo()
         return self.__task_data_id, self.__business_type
 
