@@ -20,9 +20,9 @@ def program() -> tuple:
         url_state, tdi, bt = urlInfo.getInfo()
         if url_state == 'ok':
             siteInfo = PersonInfo(task_data_id=tdi, business_type=bt)
-            siteState, tel_number, business_type = siteInfo.getInfo()
+            siteState, tel_number, business_type, ai_log, person_log, time, tag_intention = siteInfo.getInfo()
             if siteState == 'ok':
-                person_data_list.append([(tel_number + '.0'), business_type, every_url])
+                person_data_list.append([(tel_number + '.0'), business_type, every_url, ai_log, person_log, time, tag_intention])
             else:
                 info = '获取网站信息时发生未知错误'
                 error_data_list.append([every_url, info])

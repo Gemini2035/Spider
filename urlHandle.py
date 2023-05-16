@@ -18,4 +18,3 @@ class UrlInfo:
         except: 
             state = 'error'
         return state, self.__task_data_id, self.__business_type
-
